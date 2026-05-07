@@ -1,32 +1,37 @@
-var shape1 = document.getElementById("circle_btn");
-var shape2 = document.getElementById("square_btn");
-var shape3 = document.getElementById("triangle_btn");
-var circle = document.getElementById("circlediv");
-var square = document.getElementById("squarediv");
-var triangle = document.getElementById("trianglediv");
+var btn_circle = document.getElementById("btnCircle");
+var btn_rect = document.getElementById("btnRect");
+var btn_triangle = document.getElementById("btnTriangle");
 
-shape1.onclick = function() {
-    circle.removeAttribute("class", "hide");
-    circle.setAttribute("class", "first");
-}
-shape2.onclick = function() {
-    square.removeAttribute("class", "hide");
-    square.setAttribute("class", "second");
-}
-shape3.onclick = function() {
-    triangle.removeAttribute("class", "hide");
-    triangle.setAttribute("class", "third");
+var circle = document.getElementById("circle");
+var rect = document.getElementById("rect");
+var triangle = document.getElementById("triangle");
+
+btn_circle.onclick = function()
+{
+    circle.setAttribute("class", "shape_circle");
 }
 
-shape1.onmouseleave = function() {
-    circle.removeAttribute("class", "first");
+btn_rect.onclick = function()
+{
+    rect.setAttribute("class", "shape_rect");
+}
+
+btn_triangle.onclick = function()
+{
+    triangle.setAttribute("class", "shape_triangle");
+}
+
+circle.onclick = function()
+{
     circle.setAttribute("class", "hide");
 }
-shape2.onmouseleave = function() {
-    square.removeAttribute("class", "second");
-    square.setAttribute("class", "hide");
+
+rect.onclick = function()
+{
+    rect.setAttribute("class", "hide");
 }
-shape3.onmouseleave = function() { 
-    triangle.removeAttribute("class", "third");
+
+triangle.onclick = function()
+{
     triangle.setAttribute("class", "hide");
-}
+} 
